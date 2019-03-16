@@ -26,3 +26,18 @@ function rotateImageOnYaxis(img: HTMLImageElement): HTMLImageElement {
     cnv.remove();
     return res;
 }
+
+function LCM(x : number, y : number) {
+   return (!x || !y) ? 0 : Math.abs((x * y) / GCD(x, y));
+}
+ 
+ function GCD(x : number, y : number) {
+   x = Math.abs(x);
+   y = Math.abs(y);
+   while(y) {
+     let t = y;
+     y = x % y;
+     x = t;
+   }
+   return x;
+ }
